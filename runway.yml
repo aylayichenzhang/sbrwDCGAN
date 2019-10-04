@@ -6,4 +6,4 @@ spec:
   gpu: True
   cpu: True
 build_steps:
-  - pip install torch==1.2.0 runway-python numpy==1.17.2
+  - pip install runway-python numpy==1.17.2
