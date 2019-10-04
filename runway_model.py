@@ -15,7 +15,7 @@ def setup(opts):
 
 @runway.command('generate',
                 inputs={ 'z': runway.vector(length=64, sampling_std=0.5)},
-                outputs={ 'image': runway.image })
+                outputs={ 'image': runway.image(width=64, height=64)})
 def generate(model, inputs):
     # Generate ♾ infinite ♾ images
     z = inputs['z']
