@@ -19,8 +19,9 @@ def setup(opts):
 def generate(model, inputs):
     # Generate ♾ infinite ♾ images
     z = inputs['z']
-    latents = z.reshape((1, 64))
-    latents = torch.from_numpy(latents)
+    # latents = z.reshape((1, 64))
+    latents = np.random.randn(1, 64)
+    # latents = torch.from_numpy(latents)
     # Generate one image
     # noise, _ = model.buildNoiseData(1)
     with torch.no_grad():
