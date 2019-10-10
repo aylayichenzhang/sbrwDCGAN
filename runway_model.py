@@ -25,7 +25,7 @@ def generate(model, inputs):
     # Generate one image
     # noise, _ = model.buildNoiseData(1)
     with torch.no_grad():
-        generated_image = model.test(latents.float().to(model.device))
+        generated_image = model.test(latents.float())
     generated_image = generated_image.clamp(min=-1, max=1)
     generated_image = ((generated_image + 1.0) * 255 / 2.0)
     # Now generated_image contains our generated image! 🌞
