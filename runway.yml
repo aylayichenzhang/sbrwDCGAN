@@ -5,4 +5,4 @@ spec:
   gpu: True
   cpu: True
 build_steps:
-  - pip install runway-python numpy==1.17.2 pytorch
+  - pip install runway-python numpy==1.17.2 torch
