@@ -31,4 +31,4 @@ def generate(model, inputs):
     # return generated_image[0].permute(1, 2, 0).numpy().astype(np.uint8)
     return {'image': generated_image[0].permute(1, 2, 0).numpy().astype(np.uint8)}
 if __name__ == '__main__':
-    runway.run(port=5232)
+    runway.run()
