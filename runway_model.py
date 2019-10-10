@@ -22,9 +22,9 @@ def generate(model, inputs):
     latents = z.reshape((1, 64))
     latents = torch.from_numpy(latents)
     # Generate one image
-    # noise, _ = model.buildNoiseData(1)
+    noise, _ = model.buildNoiseData(1)
     with torch.no_grad():
-        generated_image = model.test(latents.float())
+        generated_image = model.test(noise)
     generated_image = generated_image.clamp(min=-1, max=1)
     generated_image = ((generated_image + 1.0) * 255 / 2.0)
     # Now generated_image contains our generated image! 🌞
